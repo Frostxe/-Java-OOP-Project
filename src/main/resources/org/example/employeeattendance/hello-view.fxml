@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.employeeattendance.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Приветственный текст -->
+    <Label fx:id="welcomeText" text="Welcome to Employee Attendance"/>
+
+    <!-- TableView для отображения данных сотрудников -->
+    <TableView fx:id="attendanceTable" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="nameColumnAttendance" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="departmentColumnAttendance" text="Department" prefWidth="150"/>
+            <TableColumn fx:id="dateColumnAttendance" text="Date" prefWidth="150"/>
+            <TableColumn fx:id="presentColumnAttendance" text="Present" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Текстовые поля для ввода -->
+    <TextField fx:id="nameFieldAttendance" promptText="Name"/>
+    <TextField fx:id="departmentFieldAttendance" promptText="Department"/>
+    <TextField fx:id="dateFieldAttendance" promptText="Date (yyyy-MM-dd)"/>
+
+    <!-- Кнопки управления -->
+    <Button text="Add Attendance" onAction="#addAttendance"/>
+    <Button text="Delete Attendance" onAction="#deleteAttendance"/>
+</VBox>
