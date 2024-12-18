@@ -26,6 +26,7 @@ Database, presentation - Arsen
 Code integration - Omurbek
 Interface design, documentation - Asel
 
+![telegram-cloud-photo-size-2-5409179394695620171-y](https://github.com/user-attachments/assets/ac52c785-5e48-474b-b3f4-9e3ae092a164)
 
 
 
