@@ -27,6 +27,10 @@ Code integration - Omurbek
 Interface design, documentation - Asel
 
 ![telegram-cloud-photo-size-2-5409179394695620171-y](https://github.com/user-attachments/assets/ac52c785-5e48-474b-b3f4-9e3ae092a164)
+![telegram-cloud-photo-size-2-5409179394695620170-y](https://github.com/user-attachments/assets/549c300f-59b2-48a4-ae4b-b6984cdbaa71)
+![telegram-cloud-photo-size-2-5409179394695620172-y](https://github.com/user-attachments/assets/deb43383-8d40-4d79-949a-2e81f4e1aadb)
+
+
 
 
 
