@@ -324,7 +324,7 @@ The project's presentation, I did with free platform "Canva", you can download p
 
 
 ## GitHub Repository
-The project source code and documentation can be accessed on GitHub at [GitHub Repository Link]().
+The project source code and documentation can be accessed on GitHub at [GitHub Repository Link](https://github.com/Frostxe/EmployeeAtteandanceSystem/tree/main).
 
 ## Jar File Build
 Installation requirements:
