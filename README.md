@@ -5,7 +5,13 @@
 2. [Project Requirements](#project-requirements)
 3. [Team Members](#team-members)
 4. [Roles of Group Members](#roles-of-group-members)
-
+5. [Screenshots](#screenshots)
+6. [Sample Data](#sample-data)
+7. [Weekly Meeting Documentation](#weekly-meeting-documentation)
+8. [OOP Concepts and questions](#oop-concepts-and-questions)
+9. [Presentation](#presentation)
+10. [Github Repository](#github-repository)
+11. [Jar File Build](#jar-file-build)
 ---
 
 ## Description
