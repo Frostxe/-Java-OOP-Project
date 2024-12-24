@@ -111,4 +111,211 @@ VALUES
 ```
 This is also possible by simply running our application and filling the table with this data through the application.
 
+## OOP Concepts and questions
+
+### 1. **Encapsulation**
+**Explanation:**  
+Encapsulation is used to protect data by making fields private and providing public getter and setter methods to access and modify them.
+
+**Code Example:**
+```java
+public class Employee {
+    private final StringProperty name;
+    private final StringProperty department;
+    private final Date hireDate;
+    private int id;
+    private boolean attendanceStatus;
+
+    public Employee(int id, String name, String department, Date hireDate) {
+        this.id = id;
+        this.name = new SimpleStringProperty(name);
+        this.department = new SimpleStringProperty(department);
+        this.hireDate = hireDate;
+        this.attendanceStatus = false; // Default status
+    }
+
+    // Getter for name
+    public String getName() {
+        return name.get();
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+    // Getter and setter for attendance status
+    public boolean getAttendanceStatus() {
+        return attendanceStatus;
+    }
+
+    public void setAttendanceStatus(boolean status) {
+        this.attendanceStatus = status;
+    }
+}
+
+```
+
+### 2. **Access Modifiers**
+**Explanation:**  
+Access modifiers control the visibility of classes, methods, and variables. `private` hides the fields from outside, while `public` makes them accessible.
+
+**Code Example:**
+```java
+public class EmployeeDAO {
+    private final Connection connection;  // private access to the connection
+
+    // public method accessible from outside
+    public void markAttendance(Employee employee, boolean status) {
+        employee.setAttendanceStatus(status);  // Update attendance status
+        // Logic to update the database with the new status
+    }
+}
+
+```
+
+### 3. **Constructor**
+**Explanation:**  
+Constructors are used to initialize objects with a valid state at the time of creation.
+
+**Code Example:**
+```java
+public Employee(int id, String name, String department, Date hireDate) {
+    this.id = id;
+    this.name = new SimpleStringProperty(name);
+    this.department = new SimpleStringProperty(department);
+    this.hireDate = hireDate;
+    this.attendanceStatus = false; // Default attendance status
+}
+
+```
+
+### 4. **Method Overloading**
+**Explanation:**  
+Method overloading allows multiple methods with the same name but different parameters, enabling the handling of different input types.
+
+**Code Example:**
+```java
+public void markAttendance(int employeeId, boolean status) {
+    // Mark attendance for an employee by ID
+}
+
+public void markAttendance(List<Employee> employees, boolean status) {
+    // Mark attendance for multiple employees at once
+    for (Employee employee : employees) {
+        employee.setAttendanceStatus(status);
+    }
+}
+
+```
+
+### 5. **Exception Handling**
+**Explanation:**  
+Exception handling is used to manage errors, ensuring the application does not crash due to unexpected issues.
+
+**Code Example:**
+```java
+try {
+    Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/EmployeeAttendance", "postgres", "123");
+} catch (SQLException e) {
+    e.printStackTrace();
+    showAlert("Database Error", "Could not connect to the database.");
+}
+
+```
+
+### 6. **Inheritance**
+**Explanation:**  
+Inheritance allows a class (e.g., `EmployeeGrade`) to reuse properties and methods from a parent class (`Employee`).
+
+**Code Example:**
+```java
+public class EmployeeGrade extends Employee {
+    private String grade;
+
+    public EmployeeGrade(int id, String name, String department, Date hireDate, String grade) {
+        super(id, name, department, hireDate); 
+        this.grade = grade;
+    }
+```
+
+### 7. **Method Overriding**
+**Explanation:**  
+Method overriding allows subclasses to provide specific implementations of methods defined in a superclass.
+
+**Code Example:**
+```java
+@Override
+public boolean getAttendanceStatus() {
+    // Override to include custom logic for full-time employees, if needed
+    return super.getAttendanceStatus();
+}
+
+```
+
+### 8. **Interface**
+**Explanation:**  
+Interfaces define common behavior for classes to implement, ensuring consistency across different implementations.
+
+**Code Example:**
+```java
+public interface EmployeeDAOInterface {
+    void markAttendance(Employee employee, boolean status);
+    void updateEmployeeAttendance(Employee employee);
+}
+
+public class EmployeeDAO implements EmployeeDAOInterface {
+    @Override
+    public void markAttendance(Employee employee, boolean status) {
+        employee.setAttendanceStatus(status);
+        // Implement logic to persist the attendance status to the database
+    }
+
+    @Override
+    public void updateEmployeeAttendance(Employee employee) {
+        // Implement logic to update the employee's attendance record in the database
+    }
+}
+
+```
+
+### 9. **Polymorphism**
+**Explanation:**  
+Polymorphism allows the handling of objects of different types in a uniform way, typically through a common interface or superclass.
+
+**Code Example:**
+```java
+List<Employee> employees = new ArrayList<>();
+employees.add(new FullTimeEmployee(1, "John", "HR", new Date(), 50000));
+employees.add(new PartTimeEmployee(2, "Alice", "Engineering", new Date(), 20));
+
+// Polymorphism in action
+for (Employee e : employees) {
+    System.out.println(e.getName());  // Works for both FullTimeEmployee and PartTimeEmployee
+    // Track attendance
+    employeeDAO.markAttendance(e, true);
+}
+
+```
+
+### 10. **Dependency Injection**
+**Explanation:**  
+Dependency Injection reduces tight coupling by passing dependencies (e.g., `EmployeeDAO`) to a class rather than creating them inside.
+
+**Code Example:**
+```java
+public class AttendanceService {
+    private final EmployeeDAO employeeDAO;
+
+    // Dependency Injection via constructor
+    public AttendanceService(EmployeeDAO employeeDAO) {
+        this.employeeDAO = employeeDAO;
+    }
+
+    public void recordAttendance(Employee employee, boolean status) {
+        employeeDAO.markAttendance(employee, status);
+    }
+}
+
+```
 
