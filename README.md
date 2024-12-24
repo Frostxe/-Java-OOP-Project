@@ -117,6 +117,21 @@ VALUES
 ```
 This is also possible by simply running our application and filling the table with this data through the application.
 
+## UML Class Diagram
+
+UML Class Diagram
+The UML class diagram provides a visual representation of the system’s structure, detailing the classes, attributes, methods, and their relationships.
+
+![UML Diagram](![main](https://github.com/user-attachments/assets/268baf3e-f7cc-4c0d-bbfb-68305a1cabad)
+)
+
+### Diagram Description:
+- **Employee**: Represents employee details with attributes like `name`, `department`, and `hireDate`.
+- **EmployeeGrade**: Extends `Employee` and adds an additional property `grade` to store the evaluation score.
+- **EmployeeDAO**: Handles database operations for managing employees and grades.
+- **EmployeeDAOInterface**: Interface for CRUD operations related to employee records.
+- **HelloController**: JavaFX controller that handles UI interactions, including employee addition, modification, deletion, and evaluation.
+
 ## OOP Concepts and questions
 
 ### 1. **Encapsulation**
