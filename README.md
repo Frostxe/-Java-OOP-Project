@@ -122,8 +122,9 @@ This is also possible by simply running our application and filling the table wi
 UML Class Diagram
 The UML class diagram provides a visual representation of the system’s structure, detailing the classes, attributes, methods, and their relationships.
 
-![UML Diagram](![main](https://github.com/user-attachments/assets/268baf3e-f7cc-4c0d-bbfb-68305a1cabad)
-)
+![UML Diagram]()
+)![main](https://github.com/user-attachments/assets/3a43be2e-8060-4391-92f4-69050e88250e)
+
 
 ### Diagram Description:
 - **Employee**: Represents employee details with attributes like `name`, `department`, and `hireDate`.
