@@ -1,4 +1,6 @@
 # Employee Attendance System
+Table of contents
+1.Description
 
 Description Employee Attendance System is an application designed to automate employee attendance tracking. The system allows for recording attendance, absences, and tardiness, as well as displaying reports for each employee. The project demonstrates the application of object-oriented programming (OOP) principles using the Java programming language.
 
