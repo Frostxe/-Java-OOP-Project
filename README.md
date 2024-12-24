@@ -14,6 +14,9 @@ Displaying a list of all employees and their attendance status.
 Managing data through a console interface.
 Handling errors and exceptions.
 Optimizing the system using OOP principles (inheritance, encapsulation, polymorphism).
-Team Members List: Sabyrbekova Asel Torobekov Arsen Chetinbaev Omurbek
+Team Members List: Sabyrbekova Asel, Torobekov Arsen, Chetymbaev Omurbek.
 
-Roles of Group Members: Database, presentation - Arsen Code integration - Omurbek Interface design, documentation - Asel
+Roles of Group Members:
+Database, presentation - Arsen 
+Code integration - Omurbek 
+Interface design, documentation - Asel
