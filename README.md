@@ -319,3 +319,17 @@ public class AttendanceService {
 
 ```
 
+## Presentation
+The project's presentation, I did with free platform "Canva", you can download presentation in PDF-format: [Canva Presentation](https://www.canva.com/design/DAGZkp1BJeE/0lVkIlS-GoOwB-L4KGHaMg/edit?utm_content=DAGZkp1BJeE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+
+## GitHub Repository
+The project source code and documentation can be accessed on GitHub at [GitHub Repository Link]().
+
+## Jar File Build
+Installation requirements:
+1. https://gluonhq.com/products/javafx/ - JavaFX
+2. https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows - Java Downloads
+3. https://johann.loefflmann.net/en/software/jarfix/index.html - Jarfix
+
+You need to provide the path to the JavaFX file
